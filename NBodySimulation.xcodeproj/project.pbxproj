@@ -14,6 +14,14 @@
 		EC7CCFFA2852108D00A2C87F /* NBodySimulationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7CCFF92852108D00A2C87F /* NBodySimulationTests.swift */; };
 		EC7CD0042852108D00A2C87F /* NBodySimulationUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7CD0032852108D00A2C87F /* NBodySimulationUITests.swift */; };
 		EC7CD0062852108D00A2C87F /* NBodySimulationUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7CD0052852108D00A2C87F /* NBodySimulationUITestsLaunchTests.swift */; };
+		EC7CD015285210F300A2C87F /* Double+G.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7CD012285210F200A2C87F /* Double+G.swift */; };
+		EC7CD016285210F300A2C87F /* Double+G.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7CD012285210F200A2C87F /* Double+G.swift */; };
+		EC7CD017285210F300A2C87F /* NBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7CD013285210F200A2C87F /* NBody.swift */; };
+		EC7CD018285210F300A2C87F /* NBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7CD013285210F200A2C87F /* NBody.swift */; };
+		EC7CD019285210F300A2C87F /* Planet.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7CD014285210F300A2C87F /* Planet.swift */; };
+		EC7CD01A285210F300A2C87F /* Planet.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7CD014285210F300A2C87F /* Planet.swift */; };
+		EC7CD01C2852113000A2C87F /* NBodyResources.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7CD01B2852113000A2C87F /* NBodyResources.swift */; };
+		EC7CD01D2852113000A2C87F /* NBodyResources.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7CD01B2852113000A2C87F /* NBodyResources.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +53,10 @@
 		EC7CCFFF2852108D00A2C87F /* NBodySimulationUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NBodySimulationUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC7CD0032852108D00A2C87F /* NBodySimulationUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NBodySimulationUITests.swift; sourceTree = "<group>"; };
 		EC7CD0052852108D00A2C87F /* NBodySimulationUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NBodySimulationUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		EC7CD012285210F200A2C87F /* Double+G.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Double+G.swift"; sourceTree = "<group>"; };
+		EC7CD013285210F200A2C87F /* NBody.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NBody.swift; sourceTree = "<group>"; };
+		EC7CD014285210F300A2C87F /* Planet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Planet.swift; sourceTree = "<group>"; };
+		EC7CD01B2852113000A2C87F /* NBodyResources.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NBodyResources.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +109,10 @@
 			children = (
 				EC7CCFE72852108C00A2C87F /* NBodySimulationApp.swift */,
 				EC7CCFE92852108C00A2C87F /* ContentView.swift */,
+				EC7CD014285210F300A2C87F /* Planet.swift */,
+				EC7CD012285210F200A2C87F /* Double+G.swift */,
+				EC7CD013285210F200A2C87F /* NBody.swift */,
+				EC7CD01B2852113000A2C87F /* NBodyResources.swift */,
 				EC7CCFEB2852108D00A2C87F /* Assets.xcassets */,
 				EC7CCFED2852108D00A2C87F /* NBodySimulation.entitlements */,
 				EC7CCFEE2852108D00A2C87F /* Preview Content */,
@@ -259,8 +275,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC7CD01C2852113000A2C87F /* NBodyResources.swift in Sources */,
 				EC7CCFEA2852108C00A2C87F /* ContentView.swift in Sources */,
+				EC7CD015285210F300A2C87F /* Double+G.swift in Sources */,
+				EC7CD017285210F300A2C87F /* NBody.swift in Sources */,
 				EC7CCFE82852108C00A2C87F /* NBodySimulationApp.swift in Sources */,
+				EC7CD019285210F300A2C87F /* Planet.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,7 +288,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC7CD01D2852113000A2C87F /* NBodyResources.swift in Sources */,
+				EC7CD016285210F300A2C87F /* Double+G.swift in Sources */,
 				EC7CCFFA2852108D00A2C87F /* NBodySimulationTests.swift in Sources */,
+				EC7CD018285210F300A2C87F /* NBody.swift in Sources */,
+				EC7CD01A285210F300A2C87F /* Planet.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -347,6 +371,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -399,6 +425,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;

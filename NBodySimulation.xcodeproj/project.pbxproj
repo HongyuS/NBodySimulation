@@ -16,12 +16,10 @@
 		EC7CD0062852108D00A2C87F /* NBodySimulationUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7CD0052852108D00A2C87F /* NBodySimulationUITestsLaunchTests.swift */; };
 		EC7CD015285210F300A2C87F /* Double+G.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7CD012285210F200A2C87F /* Double+G.swift */; };
 		EC7CD016285210F300A2C87F /* Double+G.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7CD012285210F200A2C87F /* Double+G.swift */; };
-		EC7CD017285210F300A2C87F /* NBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7CD013285210F200A2C87F /* NBody.swift */; };
-		EC7CD018285210F300A2C87F /* NBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7CD013285210F200A2C87F /* NBody.swift */; };
 		EC7CD019285210F300A2C87F /* Planet.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7CD014285210F300A2C87F /* Planet.swift */; };
 		EC7CD01A285210F300A2C87F /* Planet.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7CD014285210F300A2C87F /* Planet.swift */; };
-		EC7CD01C2852113000A2C87F /* NBodyResources.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7CD01B2852113000A2C87F /* NBodyResources.swift */; };
-		EC7CD01D2852113000A2C87F /* NBodyResources.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7CD01B2852113000A2C87F /* NBodyResources.swift */; };
+		ECD57A4F285252A5007D88E3 /* NBodyUniverse.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD57A4E285252A5007D88E3 /* NBodyUniverse.swift */; };
+		ECD57A50285277EA007D88E3 /* NBodyUniverse.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD57A4E285252A5007D88E3 /* NBodyUniverse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,9 +52,8 @@
 		EC7CD0032852108D00A2C87F /* NBodySimulationUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NBodySimulationUITests.swift; sourceTree = "<group>"; };
 		EC7CD0052852108D00A2C87F /* NBodySimulationUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NBodySimulationUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		EC7CD012285210F200A2C87F /* Double+G.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Double+G.swift"; sourceTree = "<group>"; };
-		EC7CD013285210F200A2C87F /* NBody.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NBody.swift; sourceTree = "<group>"; };
 		EC7CD014285210F300A2C87F /* Planet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Planet.swift; sourceTree = "<group>"; };
-		EC7CD01B2852113000A2C87F /* NBodyResources.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NBodyResources.swift; sourceTree = "<group>"; };
+		ECD57A4E285252A5007D88E3 /* NBodyUniverse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NBodyUniverse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,8 +108,7 @@
 				EC7CCFE92852108C00A2C87F /* ContentView.swift */,
 				EC7CD014285210F300A2C87F /* Planet.swift */,
 				EC7CD012285210F200A2C87F /* Double+G.swift */,
-				EC7CD013285210F200A2C87F /* NBody.swift */,
-				EC7CD01B2852113000A2C87F /* NBodyResources.swift */,
+				ECD57A4E285252A5007D88E3 /* NBodyUniverse.swift */,
 				EC7CCFEB2852108D00A2C87F /* Assets.xcassets */,
 				EC7CCFED2852108D00A2C87F /* NBodySimulation.entitlements */,
 				EC7CCFEE2852108D00A2C87F /* Preview Content */,
@@ -275,10 +271,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EC7CD01C2852113000A2C87F /* NBodyResources.swift in Sources */,
 				EC7CCFEA2852108C00A2C87F /* ContentView.swift in Sources */,
+				ECD57A4F285252A5007D88E3 /* NBodyUniverse.swift in Sources */,
 				EC7CD015285210F300A2C87F /* Double+G.swift in Sources */,
-				EC7CD017285210F300A2C87F /* NBody.swift in Sources */,
 				EC7CCFE82852108C00A2C87F /* NBodySimulationApp.swift in Sources */,
 				EC7CD019285210F300A2C87F /* Planet.swift in Sources */,
 			);
@@ -288,11 +283,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EC7CD01D2852113000A2C87F /* NBodyResources.swift in Sources */,
 				EC7CD016285210F300A2C87F /* Double+G.swift in Sources */,
 				EC7CCFFA2852108D00A2C87F /* NBodySimulationTests.swift in Sources */,
-				EC7CD018285210F300A2C87F /* NBody.swift in Sources */,
 				EC7CD01A285210F300A2C87F /* Planet.swift in Sources */,
+				ECD57A50285277EA007D88E3 /* NBodyUniverse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

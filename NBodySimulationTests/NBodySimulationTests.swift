@@ -62,7 +62,23 @@ final class NBodySimulationTests: XCTestCase {
         assert(p1.xxPos == 7.8)
         assert(p1.yyPos == 8.6)
     }
-
+    
+    func testLoadUniverse() async throws {
+        let proj0DataURL = URL(filePath: "/Users/hongyushi/Data/Projects/Ber~CS61B/skeleton-sp18/proj0/data/")
+        let fileURL = URL(filePath: "entropy-universe.txt",
+                          relativeTo: proj0DataURL)
+        let universe = await NBodyUniverse(fileURL: fileURL)
+        let planetCount: Int = try Int(
+            String(contentsOf: fileURL,
+                   encoding: .utf8)
+            .components(separatedBy: "\n")[0])!
+        let radius = universe.radius
+        let planets = universe.planets
+        assert(radius == 2.50e11)
+        assert(planetCount == universe.planetCount)
+        assert(planets.first?.xxPos == 2.20e11 && planets.first?.yyPos == 0.000e00)
+    }
+    
     func testPerformanceExample() throws {
         // This is an example of a performance test case.
         measure {

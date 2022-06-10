@@ -8,8 +8,8 @@
 import Foundation
 
 class NBodyUniverse: ObservableObject {
-    public var radius: Double
-    public var planets: [Planet]
+    @Published public var radius: Double
+    @Published public var planets: [Planet]
     public var planetCount: Int { planets.count }
     
     public init(radius: Double, planets: [Planet]) {

@@ -17,13 +17,13 @@ final class NBodySimulationTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testExample() throws {
+    // func testExample() throws {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
         // Any test you write for XCTest can be annotated as throws and async.
         // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
         // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
-    }
+    // }
     
     func testForce() throws {
         let sun = Planet(xP: 1.0e12, yP: 2.0e11,
@@ -76,7 +76,10 @@ final class NBodySimulationTests: XCTestCase {
         let planets = universe.planets
         assert(radius == 2.50e11)
         assert(planetCount == universe.planetCount)
-        assert(planets.first?.xxPos == 2.20e11 && planets.first?.yyPos == 0.000e00)
+        assert(planets.first?.xxPos == 2.20e11)
+        assert(planets.first?.yyPos == 0.000e00)
+        assert(planets.last?.mass == 4.869e24)
+        assert(planets.last?.name == "venus")
     }
     
     func testPerformanceExample() throws {

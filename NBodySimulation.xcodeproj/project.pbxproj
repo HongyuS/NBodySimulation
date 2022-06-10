@@ -16,6 +16,9 @@
 		EC7CD0062852108D00A2C87F /* NBodySimulationUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7CD0052852108D00A2C87F /* NBodySimulationUITestsLaunchTests.swift */; };
 		EC7CD015285210F300A2C87F /* Double+G.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7CD012285210F200A2C87F /* Double+G.swift */; };
 		EC7CD019285210F300A2C87F /* Planet.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7CD014285210F300A2C87F /* Planet.swift */; };
+		EC8BAA1728536350007EC924 /* Planet.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7CD014285210F300A2C87F /* Planet.swift */; };
+		EC8BAA1828536353007EC924 /* Double+G.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7CD012285210F200A2C87F /* Double+G.swift */; };
+		EC8BAA1928536356007EC924 /* NBodyUniverse.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD57A4E285252A5007D88E3 /* NBodyUniverse.swift */; };
 		ECD57A4F285252A5007D88E3 /* NBodyUniverse.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD57A4E285252A5007D88E3 /* NBodyUniverse.swift */; };
 		ECEC72E62853340D008CC0CA /* UniverseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECEC72E52853340D008CC0CA /* UniverseView.swift */; };
 /* End PBXBuildFile section */
@@ -285,6 +288,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				EC7CCFFA2852108D00A2C87F /* NBodySimulationTests.swift in Sources */,
+				EC8BAA1828536353007EC924 /* Double+G.swift in Sources */,
+				EC8BAA1728536350007EC924 /* Planet.swift in Sources */,
+				EC8BAA1928536356007EC924 /* NBodyUniverse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

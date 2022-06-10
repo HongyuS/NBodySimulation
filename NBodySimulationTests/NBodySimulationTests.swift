@@ -82,10 +82,19 @@ final class NBodySimulationTests: XCTestCase {
         assert(planets.last?.name == "venus")
     }
     
-    func testPerformanceExample() throws {
+    func testPerformanceExample() async throws {
+        let proj0DataURL = URL(filePath: "/Users/hongyushi/Data/Projects/Ber~CS61B/skeleton-sp18/proj0/data/")
+        let fileURL = URL(filePath: "entropy-universe.txt",
+                          relativeTo: proj0DataURL)
+        let universe = await NBodyUniverse(fileURL: fileURL)
         // This is an example of a performance test case.
         measure {
             // Put the code you want to measure the time of here.
+            Task {
+                for _ in 1 ... 100000 {
+                    await universe.updateUniverse(dt: 10_000)
+                }
+            }
         }
     }
 

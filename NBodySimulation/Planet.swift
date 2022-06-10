@@ -20,7 +20,8 @@ public struct Planet: Identifiable {
     public let name: String
     public var id: UUID
     /// Standard initializer to create a new planet.
-    public init(xP: Double, yP: Double, xV: Double, yV: Double, m: Double, name: String) {
+    public init(xP: Double, yP: Double, xV: Double, yV: Double,
+                m: Double, name: String) {
         xxPos = xP; yyPos = yP
         xxVel = xV; yyVel = yV
         mass = m
@@ -132,7 +133,7 @@ extension Planet {
     /// The initializer uses Swift Regex to match the pattern.
     /// - Parameter text: String text that describes the parameters of a planet.
     public init?(_ text: String) {
-        let value = /[+|-]?(?:\d)(?:\.\d+)?(?:[eE][+|-]?\d+)?/
+        let value = /[+|-]?(?:\d+)(?:\.\d+)?(?:[eE][+|-]?\d+)?/
         let separator = /\s+|\t/
         let matcher = Regex {
             Optionally { separator }

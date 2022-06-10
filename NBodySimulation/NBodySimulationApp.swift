@@ -9,9 +9,11 @@ import SwiftUI
 
 @main
 struct NBodySimulationApp: App {
+    @EnvironmentObject var universe: NBodyUniverse
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView().environmentObject(NBodyUniverse.emptyUniverse)
         }
     }
 }

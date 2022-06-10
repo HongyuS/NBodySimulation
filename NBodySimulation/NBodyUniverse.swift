@@ -12,7 +12,7 @@ class NBodyUniverse: ObservableObject {
     @Published public var planets: [Planet]
     public var planetCount: Int { planets.count }
     
-    public init(radius: Double, planets: [Planet]) {
+    public required init(radius: Double, planets: [Planet]) {
         self.radius = radius
         self.planets = planets
     }
@@ -21,6 +21,7 @@ class NBodyUniverse: ObservableObject {
 extension NBodyUniverse {
     /// Update a planet's position and velosity, given the net force and time.
     /// - Parameter dt: a small period of time
+    @MainActor
     public func updateUniverse(dt: Double) {
         var xForces: [Double] = []
         var yForces: [Double] = []
@@ -35,24 +36,49 @@ extension NBodyUniverse {
 }
 
 extension NBodyUniverse {
-    /// Load universe from a text file asynchronously.
+    /// Load a universe from a text file asynchronously.
     /// - Parameter url: URL of the text file
-    private func loadUniverseFrom(url: URL) async {
+    private static func loadUniverseFrom(url: URL) async -> (Double, [Planet])? {
         guard let content = try? String(contentsOf: url, encoding: .utf8)
-            .components(separatedBy: "\n") else { return }
-        if let radius: Double = Double(content[1]) {
-            self.radius = radius
-            for line in content {
-                guard let planet = Planet(line) else { continue }
-                self.planets.append(planet)
-            }
+            .components(separatedBy: "\n") else { return nil }
+        guard let r: Double = Double(content[1]) else { return nil }
+        var planets: [Planet] = []
+        for line in content {
+            guard let planet = Planet(line) else { continue }
+            planets.append(planet)
         }
+        return (r, planets)
+    }
+    
+    /// Reload the universe from a text file asynchronously.
+    /// - Parameter url: URL of the text file
+    @MainActor
+    public func reloadUniverseFrom(url: URL) async {
+        reset()
+        guard let (r, planets) = await Self.loadUniverseFrom(url: url) else { return }
+        self.radius = r
+        self.planets = planets
     }
     
     /// Initialize a new universe from a text file asynchronously.
     /// - Parameter fileURL: URL of the text file
     public convenience init(fileURL: URL) async {
-        self.init(radius: 0, planets: [])
-        await loadUniverseFrom(url: fileURL)
+        guard let (r, planets) = await Self.loadUniverseFrom(url: fileURL) else {
+            self.init(radius: 0, planets: [])
+            return
+        }
+        self.init(radius: r, planets: planets)
+    }
+    
+    /// Reset the universe to empty.
+    @MainActor
+    private func reset() {
+        radius = .zero
+        planets.removeAll()
+    }
+    
+    /// Create an empty universe.
+    public static var emptyUniverse: Self {
+        .init(radius: 0, planets: [])
     }
 }

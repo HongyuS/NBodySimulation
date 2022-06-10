@@ -106,9 +106,9 @@
 			children = (
 				EC7CCFE72852108C00A2C87F /* NBodySimulationApp.swift */,
 				EC7CCFE92852108C00A2C87F /* ContentView.swift */,
+				ECD57A4E285252A5007D88E3 /* NBodyUniverse.swift */,
 				EC7CD014285210F300A2C87F /* Planet.swift */,
 				EC7CD012285210F200A2C87F /* Double+G.swift */,
-				ECD57A4E285252A5007D88E3 /* NBodyUniverse.swift */,
 				EC7CCFEB2852108D00A2C87F /* Assets.xcassets */,
 				EC7CCFED2852108D00A2C87F /* NBodySimulation.entitlements */,
 				EC7CCFEE2852108D00A2C87F /* Preview Content */,

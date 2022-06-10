@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct ContentView: View {
+    @AppStorage("simuTime") private var simuTime: Double = 10_000
+    @AppStorage("frameRate") private var frameRate: Int = 60
     @State private var isImporting: Bool = false
     @State private var isSimulating: Bool = false
     
@@ -15,7 +17,6 @@ struct ContentView: View {
     
     var body: some View {
         VStack {
-            
             HStack {
                 Button {
                     isImporting = true
@@ -64,6 +65,10 @@ struct ContentView: View {
                 print(error.localizedDescription)
             }
         }
+    }
+    
+    private func fps2Nanosec(_ fps: Int) -> UInt64 {
+        1_000_000_000 / UInt64(fps)
     }
 }
 

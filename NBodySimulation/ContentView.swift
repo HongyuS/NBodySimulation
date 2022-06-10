@@ -45,23 +45,7 @@ struct ContentView: View {
                 }
             }
             
-            GeometryReader { geometry in
-                let frameRadius = min(geometry.size.width, geometry.size.height) / 2
-                ZStack {
-                    if universe.planetCount > 0 {
-                        ForEach(universe.planets, id: \.id) { planet in
-                            
-                            let position: CGSize = .init(width: frameRadius + CGFloat(planet.xxPos / universe.radius) * frameRadius, height: frameRadius + CGFloat(planet.yyPos / universe.radius) * frameRadius)
-                            Circle()
-                                .size(width: frameRadius / 30, height: frameRadius / 30)
-                                .foregroundColor(.primary)
-                                .offset(position)
-                        }
-                    } else {
-                        
-                    }
-                }.frame(width: frameRadius * 2, height: frameRadius * 2, alignment: .center)
-            }.frame(minWidth: 300, minHeight: 300)
+            UniverseView()
         }
         .padding()
         .fileImporter(

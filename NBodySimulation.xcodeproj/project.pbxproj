@@ -15,11 +15,9 @@
 		EC7CD0042852108D00A2C87F /* NBodySimulationUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7CD0032852108D00A2C87F /* NBodySimulationUITests.swift */; };
 		EC7CD0062852108D00A2C87F /* NBodySimulationUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7CD0052852108D00A2C87F /* NBodySimulationUITestsLaunchTests.swift */; };
 		EC7CD015285210F300A2C87F /* Double+G.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7CD012285210F200A2C87F /* Double+G.swift */; };
-		EC7CD016285210F300A2C87F /* Double+G.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7CD012285210F200A2C87F /* Double+G.swift */; };
 		EC7CD019285210F300A2C87F /* Planet.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7CD014285210F300A2C87F /* Planet.swift */; };
-		EC7CD01A285210F300A2C87F /* Planet.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7CD014285210F300A2C87F /* Planet.swift */; };
 		ECD57A4F285252A5007D88E3 /* NBodyUniverse.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD57A4E285252A5007D88E3 /* NBodyUniverse.swift */; };
-		ECD57A50285277EA007D88E3 /* NBodyUniverse.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD57A4E285252A5007D88E3 /* NBodyUniverse.swift */; };
+		ECEC72E62853340D008CC0CA /* UniverseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECEC72E52853340D008CC0CA /* UniverseView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +52,7 @@
 		EC7CD012285210F200A2C87F /* Double+G.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Double+G.swift"; sourceTree = "<group>"; };
 		EC7CD014285210F300A2C87F /* Planet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Planet.swift; sourceTree = "<group>"; };
 		ECD57A4E285252A5007D88E3 /* NBodyUniverse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NBodyUniverse.swift; sourceTree = "<group>"; };
+		ECEC72E52853340D008CC0CA /* UniverseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniverseView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +105,7 @@
 			children = (
 				EC7CCFE72852108C00A2C87F /* NBodySimulationApp.swift */,
 				EC7CCFE92852108C00A2C87F /* ContentView.swift */,
+				ECEC72E52853340D008CC0CA /* UniverseView.swift */,
 				ECD57A4E285252A5007D88E3 /* NBodyUniverse.swift */,
 				EC7CD014285210F300A2C87F /* Planet.swift */,
 				EC7CD012285210F200A2C87F /* Double+G.swift */,
@@ -276,6 +276,7 @@
 				EC7CD015285210F300A2C87F /* Double+G.swift in Sources */,
 				EC7CCFE82852108C00A2C87F /* NBodySimulationApp.swift in Sources */,
 				EC7CD019285210F300A2C87F /* Planet.swift in Sources */,
+				ECEC72E62853340D008CC0CA /* UniverseView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,10 +284,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EC7CD016285210F300A2C87F /* Double+G.swift in Sources */,
 				EC7CCFFA2852108D00A2C87F /* NBodySimulationTests.swift in Sources */,
-				EC7CD01A285210F300A2C87F /* Planet.swift in Sources */,
-				ECD57A50285277EA007D88E3 /* NBodyUniverse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

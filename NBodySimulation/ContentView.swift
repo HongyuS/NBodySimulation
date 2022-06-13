@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct ContentView: View {
-    @AppStorage("simuTime") private var simuTime: Double = 10_000
-    @AppStorage("frameRate") private var frameRate: Int = 60
+    @AppStorage("simuTime") private var simuTime: Double = 10_000 // 10_000
+    @AppStorage("frameRate") private var frameRate: Int = 60 // 60
     @State private var isImporting: Bool = false
     @State private var isSimulating: Bool = false
     
@@ -17,36 +17,38 @@ struct ContentView: View {
     
     var body: some View {
         VStack {
-            HStack {
+            HStack(spacing: 32) {
                 Button {
                     isImporting = true
                 } label: {
                     HStack {
                         Image(systemName: "square.and.arrow.down")
                             .imageScale(.medium)
-                            .foregroundColor(.accentColor)
+                            .foregroundColor(.primary)
                         Text("Load Universe")
                     }
                 }
                 Button {
                     isSimulating.toggle()
-                    Task {
+                    Task(priority: .high) {
                         while isSimulating {
-                            universe.updateUniverse(dt: 10_000)
-                            try! await Task.sleep(nanoseconds: 16_666_667)
+                            universe.updateUniverse(dt: simuTime)
+                            try! await Task.sleep(nanoseconds: fps2Nanosec(frameRate))
                         }
                     }
                 } label: {
                     HStack {
-                        Image(systemName: isSimulating ? "stop.fill" : "play.fill")
+                        Image(systemName: isSimulating ? "pause.fill" : "play.fill")
                             .imageScale(.medium)
-                            .foregroundColor(.accentColor)
-                        Text(isSimulating ? "Stop" : "Start")
+                            .foregroundColor(.primary)
                     }
                 }
-            }
+            }.padding()
             
             UniverseView()
+                .frame(minWidth: 375 - 16,
+                       minHeight: 375 - 16)
+                .aspectRatio(1, contentMode: .fit)
         }
         .padding()
         .fileImporter(

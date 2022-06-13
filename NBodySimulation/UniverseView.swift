@@ -65,7 +65,6 @@ extension UniverseView {
         case "neptune": return .neptune
         case "pluto": return .pluto
         case "blackhole": return .blackhole
-        case "star": return .star
         case "nucleus": return .nucleus
         case "electron": return .electron
         case "pin": return .pin
@@ -85,7 +84,7 @@ struct PlanetViewProperty {
     let color: Color
     
     // Solar System
-    static var sun: Self { Self(sizeFraction: 12, color: .white) }
+    static var sun: Self { Self(sizeFraction: 12, color: .orange) }
     static var mercury: Self { Self(sizeFraction: 38, color: .gray) }
     static var venus: Self { Self(sizeFraction: 35, color: .yellow) }
     static var earth: Self { Self(sizeFraction: 25, color: .blue) }
@@ -98,12 +97,12 @@ struct PlanetViewProperty {
     static var pluto: Self { Self(sizeFraction: 40, color: .gray) }
     // General
     static var blackhole: Self { Self(sizeFraction: 10, color: .brown) }
-    static var star: Self { Self(sizeFraction: 30, color: .yellow) }
+    static var star: Self { Self(sizeFraction: 45, color: .yellow) }
     // Atom
     static var nucleus: Self { Self(sizeFraction: 15, color: .white) }
     static var electron: Self { Self(sizeFraction: 45, color: .yellow) }
     // Pin Ball
-    static var pin: Self { Self(sizeFraction: 10, color: .white) }
+    static var pin: Self { Self(sizeFraction: 20, color: .white) }
     static var ball: Self { Self(sizeFraction: 15, color: .gray) }
     // STAR WARS
     static var death_star: Self { Self(sizeFraction: 20, color: .gray) }
